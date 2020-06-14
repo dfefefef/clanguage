@@ -5,6 +5,9 @@ void *(memset)(void *s, int c, size_t n)
 {
 	const unsigned char uc = c;
 	unsigned char *su;
+
+
+
 	for (su = s; 0 < n; ++su, --n)
 		*su = uc;
 	return s;
@@ -30,7 +33,7 @@ void devide()
 	int nums[10];
 	int p[3];
 	int flag = 1;
-	
+
 	for ( p[0] = 102; p[0] <= 329; p[0]++)
 	{
 		memset(nums, 0, sizeof(int)*10);
@@ -114,7 +117,7 @@ void WorkingOrRest()
 
 		for (int i = 1990; i < Y; i++)
 			sum_day += LeapYear(i) ? 366 : 365;
-	
+
 		for (int i = 1; i < M; i++)
 			sum_day += i == 2 ? 28 + leap : Md[i - 1];
 
